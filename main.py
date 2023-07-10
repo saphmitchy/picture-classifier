@@ -62,7 +62,7 @@ def end_process():
 
 def copyPicture():
     for target in targetDir:
-        shutil.copy(currentFile, AGGREGATE_PATH + target)
+        shutil.copy(currentFile, os.path.join(AGGREGATE_PATH, target))
 
 def make_buttons():
     for i in enumerate(os.listdir(AGGREGATE_PATH)):
